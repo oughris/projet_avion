@@ -24,10 +24,13 @@ public class vol  {
 	private int nbr_places;
 	private String escale;
 	private int bagage;
-	//ajouter un comment
-	//ajouter un autre cmnt
-	//autre test
-	@OneToMany(mappedBy="vol")
+	
+
+    @ManyToMany
+	@JoinTable(name="reserv_vol",
+	joinColumns=@JoinColumn(name="id_vol"),
+	inverseJoinColumns=@JoinColumn(name="id_reserv")
+	)
 	private List<reservation> reservations;
 	
 	public int getId() {

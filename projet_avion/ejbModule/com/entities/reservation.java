@@ -22,9 +22,8 @@ public class reservation  {
 	private String email;
 	private String tel;
 	
-	@ManyToOne
-	@JoinColumn(name="vol_reserv")
-	private vol vol;
+	@ManyToMany(mappedBy="reservations")
+	private List<vol> vols;
 	
 	@ManyToOne
 	@JoinColumn(name="compte_reserv")

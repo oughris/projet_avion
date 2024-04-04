@@ -1,6 +1,7 @@
 package com.session;
 
 import java.util.List;
+import java.sql.Date;
 import javax.ejb.LocalBean;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
@@ -44,6 +45,16 @@ public class session_vol implements volLocal {
 		vol vol = EM.find(vol.class, id);
 		return vol;
 	}
+
+	public List<vol> findVol(Date dateDepart, Date dateArrivee, String departure, String destination) {
+		Query query = EM.createQuery("SELECT v FROM vol v WHERE v.date_d =: dateDepart AND v.date_a =: dateArrivee AND v.departure =: departure AND v.destination =: destination");
+		query.setParameter("dateDepart", dateDepart);
+		query.setParameter("dateArrivee", dateArrivee);
+		query.setParameter("departure", departure);
+		query.setParameter("destination", destination);
+		return query.getResultList();
+	}
+	
 
 	@Override
 	public List<vol> getallvol() {

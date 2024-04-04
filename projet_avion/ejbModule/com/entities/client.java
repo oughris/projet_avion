@@ -16,7 +16,8 @@ public class client {
 	private String prenom;
 	private String email;
 	private String tel;
-	
+
+	//hajar_boubrik
 	@OneToOne
     @JoinColumn(name="compte_client")	
 	private compte compte1;

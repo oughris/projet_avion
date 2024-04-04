@@ -26,6 +26,7 @@ public class vol  {
 	private int bagage;
 	//ajouter un comment
 	//ajouter un autre cmnt
+	//autre test
 	@OneToMany(mappedBy="vol")
 	private List<reservation> reservations;
 	

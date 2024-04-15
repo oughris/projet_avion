@@ -5,8 +5,11 @@ import java.time.LocalTime;
 import java.util.List;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
+import javax.persistence.JoinColumn;
 
 @Entity
 @Table(name="vol")
@@ -26,11 +29,13 @@ public class vol  {
 	private int bagage;
 	
 
-    @ManyToMany
-	@JoinTable(name="reserv_vol",
-	joinColumns=@JoinColumn(name="id_vol"),
-	inverseJoinColumns=@JoinColumn(name="id_reserv")
+	@ManyToMany
+	@JoinTable(
+	    name = "reserv_vol",
+	    joinColumns = @JoinColumn(name = "id_vol"),
+	    inverseJoinColumns = @JoinColumn(name = "id_reserv")
 	)
+
 	private List<reservation> reservations;
 	
 	public int getId() {

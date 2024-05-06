@@ -6,13 +6,10 @@ import java.util.List;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.JoinTable;
-<<<<<<< HEAD
 import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
-=======
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToMany;
->>>>>>> 1cb5d1e8bbd4e53c4925969e87a51b40a8ccaf5c
 import javax.persistence.Table;
 import javax.persistence.JoinColumn;
 

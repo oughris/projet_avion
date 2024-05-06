@@ -1,13 +1,9 @@
 package com.entities;
-
-<<<<<<< HEAD
 import java.util.Date;
 import java.util.List;
 
-=======
-import java.sql.Date;
+//COMMENTAIRE
 import java.util.List;
->>>>>>> 1cb5d1e8bbd4e53c4925969e87a51b40a8ccaf5c
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;

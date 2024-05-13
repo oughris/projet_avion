@@ -29,7 +29,15 @@ public class vol  {
 	private int nbr_places;
 	private String escale;
 	private int bagage;
+	private int nbrplace;
 	
+
+	public int getNbrplace() {
+		return nbrplace;
+	}
+	public void setNbrplace(int nbrplace) {
+		this.nbrplace = nbrplace;
+	}
 
 	@ManyToMany
 	@JoinTable(
@@ -107,8 +115,10 @@ public class vol  {
 		this.bagage = bagage;
 	}
 	
+	
+	
 	public vol(int id, String departure, String destination, int id_avion, Date date_d, Date date_a, LocalTime heure_d,
-			LocalTime heure_a, int nbr_places, String escale, int bagage) {
+			LocalTime heure_a, int nbr_places, String escale, int bagage, int nbrplace) {
 		super();
 		this.id = id;
 		this.departure = departure;
@@ -121,8 +131,8 @@ public class vol  {
 		this.nbr_places = nbr_places;
 		this.escale = escale;
 		this.bagage = bagage;
+		this.nbrplace = nbrplace;
 	}
-	
 	public vol() {
 		super();
 	}
